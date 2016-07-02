@@ -10,7 +10,7 @@ constant Resize_AutoLock = 0
 constant Resize_ReuseSetting= 3
 
 // Menus
-Menu Resize_Memu
+Menu Resize_Memu, dynamic
 	"(Target: "+Resize#Target()
 	"----------"
 	// Last Setting {{{
