@@ -321,7 +321,9 @@ End
 static Function/S MenuItemLastSetting(i)
 	Variable i
 	WAVE/T set=root:Packages:resize:setting
-	if(WaveExists(set) && i < min(DimSize(set,0),Resize_ReuseSetting))
+	if(!WaveExists(set))
+		return ""
+	elseif(i < min(DimSize(set,0),Resize_ReuseSetting))
 		return "\\M0>> Resize Graph ("+StringByKey("width",set[i])+" "+AbbrUnit()+" : "+StringByKey("height",set[i])+" "+AbbrUnit()+")"
 	elseif(i == Resize_ReuseSetting && i>0)
 		return "--"
