@@ -3,15 +3,15 @@
 #pragma moduleName=Resize
 
 // Options
-strconstant Resize_Memu = "Resize"
-strconstant Resize_Unit = "cm" // cm, inch, or points
+strconstant Resize_Memu  = "Resize"
+strconstant Resize_Unit  = "cm" // cm, inch, or points
 strconstant Resize_Range = "4;5;6;7;8;9;10"
 constant Resize_AutoLock = 0
-constant Resize_ReuseSetting= 3
+constant Resize_ReuseSetting = 3
 
 // Menus
 Menu Resize_Memu, dynamic
-	"(Target: "+Resize#Target()
+	"Target: "+Resize#Target(),/Q,Execute/Q/Z "DoWindow/F "+Resize#Target()
 	"----------"
 	// Last Setting {{{
 	Resize#MenuItemLastSetting(0),  /Q, Resize#MenuCommandLastSetting(0)
@@ -310,10 +310,10 @@ static Function MenuCommand(index,rate,base)
 	Variable param=Str2Num(StringFromList(index,RESIZE_RANGE))
 	Switch(base)
 	case 0:
-		Resize#ResizeGraph(Target(),param*rate,param)			
+		Resize#ResizeGraph(Target(),param,param/rate)			
 		break
 	case 1:
-		Resize#ResizeGraph(Target(),param,param/rate)	
+		Resize#ResizeGraph(Target(),param*rate,param)	
 		break
 	EndSwitch	
 End
@@ -324,7 +324,10 @@ static Function/S MenuItemLastSetting(i)
 	if(!WaveExists(set))
 		return ""
 	elseif(i < min(DimSize(set,0),Resize_ReuseSetting))
-		return "\\M0>> Resize Graph ("+StringByKey("width",set[i])+" "+AbbrUnit()+" : "+StringByKey("height",set[i])+" "+AbbrUnit()+")"
+		Variable order = 2
+		Variable width  = round(NumberByKey("width" ,set[i])*10^order)/10^order
+		Variable height = round(NumberByKey("height",set[i])*10^order)/10^order
+		return "\\M0>> Resize Graph ("+Num2Str(width)+" "+AbbrUnit()+" : "+Num2Str(height)+" "+AbbrUnit()+")"
 	elseif(i == Resize_ReuseSetting && i>0)
 		return "--"
 	else
