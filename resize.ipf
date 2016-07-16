@@ -3,14 +3,15 @@
 #pragma moduleName=Resize
 
 // Options
-strconstant Resize_Memu  = "Resize"
+strconstant Resize_Menu  = "Resize"
 strconstant Resize_Unit  = "cm" // cm, inch, or points
 strconstant Resize_Range = "4;5;6;7;8;9;10"
 constant Resize_AutoLock = 0
 constant Resize_ReuseSetting = 3
 
 // Menus
-Menu Resize_Memu, dynamic
+Menu StringFromList(0,Resize_Menu), dynamic
+	RemoveListItem(0,Resize_Menu)
 	"Target: "+Resize#Target(),/Q,Execute/Q/Z "DoWindow/F "+Resize#Target()
 	"----------"
 	// Last Setting {{{
