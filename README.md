@@ -33,5 +33,5 @@ Function ResizeSetting()
 End
 ```
 
-### スクリーンショット
+### Screenshot
 <img src="https://raw.github.com/wiki/ryotako/igor-resize/ScreenShot.png" width="800px">
