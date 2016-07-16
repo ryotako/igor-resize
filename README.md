@@ -12,7 +12,7 @@ resize.ipf はグラフのサイズを変更するためのユーザー定義メ
 ### オプション
 メインプロシージャウィンドウに以下のように記述することで，ipfファイルを直接編集せずに挙動を変更することができます．
 ```
-override strconstant Resize_Memu     = "Rsz"     // メニューの項目名
+override strconstant Resize_Menu     = "Graph;-" // メニューの項目名 (標準の「グラフ」メニューに表示)
 override strconstant Resize_Unit     = "inch"    // 単位の指定 (cm, inch, or points)
 override strconstant Resize_Range    = "1;2;3;4" // ;を区切り文字として，サイズの選択肢を指定
 override constant Resize_AutoLock    = 1         // 1に設定するとサイズ変更後にサイズを固定. 0で無効
@@ -25,7 +25,7 @@ override constant Resize_ReuseSetting= 5         // サイズ変更履歴を記�
 // この関数を実行すると上記の設定がメインプロシージャウィンドウに書き出される．
 // (ただし，値がデフォルトから変更されていない場合は書き出されない)
 Function ResizeSetting()
-	override("Resize_Memu= Rsz")
+	override("Resize_Menu= Graph;-")
 	override("Resize_Unit = inch")
 	override("Resize_Range = 1;2;3;4")
 	override("Resize_AutoLock = 1")
