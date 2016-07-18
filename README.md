@@ -34,4 +34,5 @@ End
 ```
 
 ### Screenshot
-<img src="https://raw.github.com/wiki/ryotako/igor-resize/ScreenShot.png" width="800px">
+
+![Screenshot](https://github.com/ryotako/igor-resize/blob/master/Screenshot.png)
