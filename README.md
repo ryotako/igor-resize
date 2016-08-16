@@ -35,4 +35,4 @@ End
 
 ### Screenshot
 
-![Screenshot](https://github.com/ryotako/igor-resize/blob/master/Screenshot.png)
+![Screenshot](http://img.f.hatena.ne.jp/images/fotolife/r/ryotako/20160816/20160816034054.png)
