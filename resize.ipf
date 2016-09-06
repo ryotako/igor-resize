@@ -1,5 +1,3 @@
-#ifndef INCLUDE_GURDE_RESIZE
-#define INCLUDE_GURDE_RESIZE
 #pragma moduleName=Resize
 
 // Options
@@ -364,6 +362,4 @@ static Function CaptureSize()
 	GetWindow/Z $Target(), psize
 	SaveSetting(Points2Size(V_right-V_left), Points2Size(V_bottom-V_top))
 End
-
-#endif
 
