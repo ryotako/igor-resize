@@ -123,7 +123,7 @@ End
 
 static Function SaveSetting(width, height)
 	Variable width, height // cm
-	if(NumType(width) || NumType(height))
+	if(NumType(width) || NumType(height) || strlen(TargetWindow()) == 0)
 		return NaN
 	endif
 	
