@@ -14,7 +14,7 @@ Menu StringFromList(0, Resize_Menu), dynamic
 	Resize#MenuItems_LastSetting(), /Q, Resize#MenuAction_LastSetting()
 	"-"
 	SubMenu "Resize Graph 1:1"
-		Resize#MenuItems(), Resize#MenuAction( 1/ 1, "width")
+		Resize#MenuItems(), /Q, Resize#MenuAction( 1/ 1, "width")
 	End
 	"(Wide"
 	SubMenu "Resize Graph 4:3"
