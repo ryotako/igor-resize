@@ -3,7 +3,7 @@
 
 // Options
 strconstant Resize_Menu  = "Resize"
-strconstant Resize_Range = "4;5;6;7;8;9;10"
+strconstant Resize_Range = "5;6;7;8;9;10;11;12"
 constant Resize_ReuseSetting = 3
 
 // Menus
@@ -63,7 +63,7 @@ static Function MenuAction(ratio, baseDirection)
 		case "width":
 		default:
 			width = Str2Num(number)
-			height = width * ratio
+			height = width / ratio
 	endSwitch
 
 	SaveSetting(width, height)
