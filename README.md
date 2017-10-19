@@ -19,4 +19,4 @@ override constant Resize_ReuseSetting = 5         // Number of records of resizi
 
 ### Screenshot
 
-![Screenshot](http://img.f.hatena.ne.jp/images/fotolife/r/ryotako/20160816/20160816034054.png)
+![Screenshot](demo.png)
