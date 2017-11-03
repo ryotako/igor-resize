@@ -1,3 +1,5 @@
+:us: [:jp:](https://github.com/ryotako/igor-resize/wiki)
+
 # igor-resize
 
 resize.ipf provides an user defined menu to resize graphs
