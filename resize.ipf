@@ -7,7 +7,7 @@ strconstant Resize_Range = "5;6;7;8;9;10;11;12"
 constant Resize_ReuseSetting = 3
 
 // Menus
-Menu StringFromList(0, Resize_Menu), dynamic
+Menu StringFromList(0, Resize_Menu)
 	RemoveListItem(0, Resize_Menu)
 	
 	"Target: " + Resize#TargetWindow(), /Q, DoWindow/F $Resize#TargetWindow()
@@ -138,4 +138,5 @@ static Function SaveSetting(width, height)
 	Extract/T/O set, set, cmpstr(set,setting)
 	InsertPoints 0,1,set; set[0] = "width:"+Num2Str(width)+";height:"+Num2Str(height)
 	DeletePoints Resize_ReuseSetting, DimSize(set,0), set
+	BuildMenu StringFromList(0, Resize_Menu)
 End
