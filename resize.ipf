@@ -27,12 +27,12 @@ Menu StringFromList(0, Resize_Menu)
 	End
 	"(Tall"
 	SubMenu "Resize Graph 3:4"
-		"(Select Width;"    + Resize#MenuItems(), /Q, Resize#MenuAction(3/4, "width")	
-		"-;(Select Height;" + Resize#MenuItems(), /Q, Resize#MenuAction(3/4, "height")
+		"(Select Width;"    + Resize#MenuItems(), /Q, Resize#MenuAction( 3/4, "width")	
+		"-;(Select Height;" + Resize#MenuItems(), /Q, Resize#MenuAction( 3/4, "height")
 	End
 	SubMenu "Resize Graph 9:16"
-		"(Select Width;"    + Resize#MenuItems(), /Q, Resize#MenuAction(16/9, "width")	
-		"-;(Select Height;" + Resize#MenuItems(), /Q, Resize#MenuAction(16/9, "height")
+		"(Select Width;"    + Resize#MenuItems(), /Q, Resize#MenuAction(9/16, "width")	
+		"-;(Select Height;" + Resize#MenuItems(), /Q, Resize#MenuAction(9/16, "height")
 	End
 	"-;Capture Graph Size;", /Q, Resize#CaptureGraphSize()
 End
